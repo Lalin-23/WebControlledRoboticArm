@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Robot Hand Web Controller using Web Serial API">
+    <title>Robotic Hand Controller</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Robotic Hand Controller</h1>
+            <p>Control all 7 servos directly from your browser.</p>
+            <button id="connect-btn" class="primary-btn">Connect via USB</button>
+            <div id="connection-status" class="status disconnected">Disconnected</div>
+        </header>
+
+        <main>
+            <section class="panel control-panel">
+                <h2>Manual Control</h2>
+                <div class="sliders-container" id="sliders-container">
+                    <!-- Sliders injected via JS -->
+                </div>
+            </section>
+
+            <section class="panel poses-panel">
+                <h2>Quick Poses</h2>
+                <div class="poses-grid">
+                    <button class="pose-btn" data-pose="1">Pose 1</button>
+                    <button class="pose-btn" data-pose="2">Pose 2</button>
+                    <button class="pose-btn" data-pose="3">Pose 3</button>
+                    <button class="pose-btn" data-pose="4">Pose 4</button>
+                    <button class="pose-btn" data-pose="5">Pose 5</button>
+                    <button class="pose-btn" data-pose="6">Pose 6</button>
+                    <button class="pose-btn" data-pose="7">Pose 7</button>
+                    <button class="pose-btn emergency-btn" data-pose="e">Stop / Reset (e)</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
